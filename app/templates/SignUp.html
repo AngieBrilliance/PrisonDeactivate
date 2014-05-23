@@ -2,13 +2,22 @@
 <html>
         <head>
                 <title> Sign Up </title>
-                <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='static1.css') }}">
+                <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='DecarceratorStyleSheet.css') }}">
 
         </head>
 
 		<body>
-
 <!-- Main content goes here -->
+	<div id="navigation_bar">
+		<a href="{{ url_for('LandingPage') }}"><div class='nav_button'> Home </div> </a>
+		<div class='nav_button'> About Us </div>
+		<a href="{{ url_for('Login') }}"><div class='nav_button'> Login </div> </a>
+
+		<a href="{{ url_for('SignUp') }}"><div class='nav_button'> Sign Up </div> </a>
+		<div class='nav_button'> Why We Do It </div>
+		<div class='nav_button'> Get Involved </div>
+	</div>
+
 		<h3>Sign Up to create an account.</h3>
 
 		<p> This will help us help you as soon as possible.</p>

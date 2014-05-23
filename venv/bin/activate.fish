@@ -32,7 +32,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/angiebrilliance/GitRepos/PrisonDeactivate/venv"
+set -gx VIRTUAL_ENV "/home/angiebrilliance/GitRepos/TheDecarcerator/venv"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

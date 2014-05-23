@@ -1,0 +1,86 @@
+# How to launch a flask app locally.
+
+# This is a one page document on how to begin when launching a flask app locally.
+
+# First Download Flask through the terminal.
+#  -Make sure flask files are in the correct folder.
+
+# Load a virtual envoronment
+#  - A virtual environment is basically a protective sheild to launch the app without damaging your computer.
+
+# Create a folder pertaining to the name of the app that you're launching.
+
+# Activate flask within the terminal. (. flask/bin/activate)
+   - It will create multiple flask files (bin, include, lib, local) within the folder you created.
+
+# In order to turn your terminal into a flask command line enter: pip install flask
+
+# Create two python scripts (run.py & config.py)
+#  - run.py will launch the app, the script you write within it will look as follows:
+
+	# -*- coding: utf-8 -*-
+	#!flask/bin/python
+
+	from app import app
+	app.run(debug=True)
+ 		 - (The T in True should be captalized)
+
+# The config.py script will look as follows: 
+	import os
+	basedir = os.path.abspath(os.path.dirname(__file__))
+  		- (Be sure to double the underscore on wach side of file.)
+
+# Within the folder of your application you will also create a folder named app.
+
+# Within the app folder you will also create two folders (Static & templates)
+		- Static is a folder for CSS files and any images you may have. 
+		- Templates is a folder for any html files you need for your app.
+# 	If you've created HTML and CSS files for you application, now would be the time to move 	them into these folders. If you have not, save them into these folders. 
+#	To establish a link between the HTML in your templates file and stylesheets(CSS) in your 	 static folder using the <link> tag within your HTML files within the <head> portion for 		your file. For ex:
+		<link rel="stylesheet" type="text/css" href= "{{ url_for('static', filename='stylesheet.css')}}"
+
+# you will also create two python scripts (__init__.py & views.py)
+		- Be sure to double the underscores in the __init__.py file.
+
+# the __init__.py script will look as follows:
+
+# -*- coding: utf-8 -*-
+from flask import Flask
+		                  (The second flask is capitalized intentionally.
+app = Flask(__name__)
+app.config.from_object('config')
+
+from app import views.
+
+
+# the views.py script will look as follows:
+# -*- coding: utf-8 -*-
+
+from app import app
+from flask import render_template
+
+@app.route("/")
+def index():
+	return render_template('nameofyourapp.html')
+				- in parenthesis should be the name of your html file.
+
+# Do a last run through of all of your files and makes sure you have:
+	- Double underscores when needed ex. (__file__)
+	- All words capitalized when needed (from flask import Flask)
+	- Everything is spelled correctly
+
+# Now, in your flask terminal run your app with the command:
+#		python run.py
+#	Here you should see the local host url: 
+#		ex. http://127.0.0.1:5000	
+
+# Open up a internet browser and type in the url and see the magic happen. 
+
+
+
+
+
+
+
+
+

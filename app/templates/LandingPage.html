@@ -1,24 +1,29 @@
 <!--This is my decarcerapp landing page.-->
 <!doctype html>
+
 <html>
         <head>
-                <title>Decarcerapp</title>
-                <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='static1.css') }}">
+              <title>Decarcerator</title>
+            <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='DecarceratorStyleSheet.css') }}">
 
         </head>
 
 		<body>
+	<div id="navigation_bar">
+		<a href="{{ url_for('LandingPage') }}"><div class='nav_button'> Home </div> </a>
+		<div class='nav_button'> About Us </div>
+		<a href="{{ url_for('Login') }}"><div class='nav_button'> Login </div> </a>
+
+		<a href="{{ url_for('SignUp') }}"><div class='nav_button'> Sign Up </div> </a>
+		<div class='nav_button'> Why We Do It </div>
+		<div class='nav_button'> Get Involved </div>
+	</div>
 
 <!-- Main content goes here -->
-		<h3>The Decarcerapp</h3>
+		<h3>The Decarcerator.</h3>
 
-		<p> An app to help young people of color navigate interactions with the police.</p>
+		<p> Serving young people of color to get immediate help in navigating police interactions. </p>
 
-	<div id="navigation_bar">
-		<div class='nav_button'> Sign In </div>
-		<div class='nav_button'> About Us </div>
-		<div class='nav_button'> Affiliate Organizations </div>
-		<div class='nav_button'> Contact US </div>
-		</body>
-	</div>
+
+</body>
 </html>

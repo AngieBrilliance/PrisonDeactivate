@@ -3,19 +3,15 @@ from app import app
 from flask import render_template
 
 @app.route('/')
-@app.route('/index')
-def index():
-	return render_template('index.html')
-
 @app.route('/LandingPage')
-def newsfeed():
+def LandingPage():
 	return render_template('LandingPage.html')
 
-@app.route('/LawyerLogin')
-def newsfeed():
-	return render_template('LawyerLogin.html')
+@app.route('/Login')
+def Login():
+	return render_template('Login.html')
 
 @app.route('/SignUp')
-def newsfeed():
+def SignUp():
 	return render_template('SignUp.html')
 	
